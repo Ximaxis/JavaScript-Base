@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<script src="script.js"></script>
+	<script>
+		//		1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+
+		function eratosthenes(n) {
+			var one = [], //пустой
+				upperLimit = Math.sqrt(n), //10
+				two = []; //пустой
+
+			var i = 0;
+			while (i < n) {
+				one.push(true); // Заполняем массив true
+				i++;
+			}
+
+			var i = 2;
+			while (i <= upperLimit) {
+				if (one[i]) {
+					var j = i * i;
+					while (j < n) {
+						one[j] = false; // заменяем на false везде где есть совпадение в цикле
+						j += i;
+					}
+				}
+				i++;
+			}
+			var i = 2;
+			while (i < n) {
+				if (one[i]) {
+					two.push(i); // переносит во второй список номера элементов являющиеся true
+				}
+				i++;
+			}
+
+			return two;
+		};
+		document.write(eratosthenes(100));
+
+		//2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров
+		//3. Товары в корзине хранятся в массиве. Задачи:
+		//a) Организовать такой массив для хранения товаров в корзине;
+		//b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+
+		var obj1 = {
+			product: 1,
+			price: 100,
+			count: 4
+		};
+		var obj2 = {
+			product: 2,
+			price: 200,
+			count: 3
+		};
+		var obj3 = {
+			product: 3,
+			price: 300,
+			count: 2
+		};
+		var obj4 = {
+			product: 4,
+			price: 400,
+			count: 1
+		};
+
+		var bascet = [obj1, obj2, obj3, obj4];
+
+		function sumBascet(bascet) {
+			var sum = 0;
+			for (var i in bascet) {
+				sum += bascet[i].price * bascet[i].count
+			}
+			return sum;
+		}
+
+		alert("В корзине товаров на сумму: " + sumBascet(bascet))
+
+		//4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+
+		for (var i = 0; i <= 9; alert(i++)) {
+			// здесь пусто
+		}
+
+		//5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5: x
+
+		for (var i = 1; i <= 20; i++) {
+			console.log("x".repeat(i));
+		}
+
+	</script>
+	<meta charset="UTF-8">
+	<title>Урок 3. Циклы, массивы, структуры данных</title>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
