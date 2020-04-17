@@ -1,0 +1,50 @@
+html {
+	text-align: center;
+}
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+td {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+}
+
+.black-Cell {
+	background-color: #CB6F56;
+}
+
+.white-Cell {
+	background-color: #F1CDA9;
+}
+
+.border-bottom {
+	border-bottom: 2px solid black;
+}
+
+.border-right {
+	border-right: 2px solid black
+}
+
+.figure-black {
+	font-size: 40px;
+	color: #000;
+	font-weight: bold;
+}
+
+.figure-white {
+	font-size: 40px;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.border-hint {
+	font-size: 25px;
+	font-weight: bold;
+/*	transform: rotate(180deg);*/
+}
+.rotate {
+	transform: rotate(180deg);
+}
