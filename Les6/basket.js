@@ -1,4 +1,3 @@
-'use strict'
 document.querySelectorAll(".product__button_info").forEach(button =>{
     button.addEventListener("click",e =>{
         const info = e.target.parentNode.parentNode.querySelector(".product__info");
