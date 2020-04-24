@@ -1,0 +1,62 @@
+#snake-field{
+    display: inline-block;
+}
+
+#snake-renew,#snake-start{
+    width: 100px;
+    padding: 15px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+}
+
+.game-table{
+    border-collapse: collapse;
+    background-color: burlywood;
+}
+td.game-table-cell{
+    width: 20px;
+    height: 20px;
+    /*border: 1px dotted #eee;*/
+}
+.snake-unit{
+    background-color: greenyellow;
+}
+.food-unit{
+    background-image: url(apple.png);
+	background-size: 23.5px;
+	background-color: burlywood;
+}
+.block-unit{
+    background-color: black;
+}
+.buttons{
+}
+.wrap{
+    margin: auto;
+    text-align: center;
+}
+#area,#logset{
+	margin: auto;
+    text-align: center;
+	display: flex;
+	width: 40%;
+	height: 500px
+}
+.left-area{
+	margin: auto
+}
+#snake-speed,#snake-time,#snake-score{
+    width: 100px;
+    padding: 15px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.hidden{
+	display: none;
+}
